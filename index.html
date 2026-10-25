@@ -1,0 +1,1192 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="패스트파인드 · 가장 빠른 인플루언서 플랫폼">
+<meta property="og:description" content="가장 빠른 인플루언서 플랫폼. 인당 14.9만원, 3일 안에 리스트, 게시 5일 뒤부터 소구점별 결과 리포트.">
+<meta property="og:image" content="https://jjangga7004-crypto.github.io/fastfind-preview/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script src="config.js"></script>
+<script>
+/* 메타 픽셀: config.js의 metaPixelId가 있을 때만 불러옵니다. 페이지에서 QuoteUsed(견적기 사용), Lead(신청 완료)를 추가로 보냅니다. */
+(function () {
+  var id = window.FF_CONFIG && window.FF_CONFIG.metaPixelId;
+  if (!id) return;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', id);
+  fbq('track', 'PageView');
+})();
+</script>
+<title>패스트파인드 · 가장 빠른 인플루언서 플랫폼</title>
+<meta name="description" content="가장 빠른 인플루언서 플랫폼. 인당 14.9만원, 3일 안에 리스트, 게시 5일 뒤부터 소구점별 결과 리포트.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: 전문가용 SaaS 랜딩. 첫 화면 견적기 → 1명 vs 1만 명 → 소구점 → 필터 → 4단계 제품 화면 → 예산 → 가격. 노랑은 '많이·빨리·이긴 것'을 짚는 곳에만. */
+:root{
+  --bg:#f5f6f8;
+  --surface:#ffffff;
+  --surface-2:#eef0f3;
+  --fg:#0d0e10;
+  --muted:#5a606a;
+  --faint:#8b919b;
+  --dot:#c5c9d0;
+  --line:#e2e4e9;
+  --signal:#ffd60a;
+  --signal-ink:#0d0e10;
+  --signal-soft:#fff5bf;
+  --mark-line:#ffd60a;
+  --mark-fg:#0d0e10;
+  --ok:#0f8a47;
+  --ok-soft:#e1f5e9;
+  --info:#2d5bd7;
+  --info-soft:#e6edfc;
+  --band-bg:#0d0e10;
+  --band-surface:#17191d;
+  --band-input:#0f1013;
+  --band-fg:#f3f4f6;
+  --band-muted:#9aa1ab;
+  --band-line:#2a2d33;
+  --shadow:0 24px 60px -28px rgba(13,14,16,.28);
+  --font-display:"Black Han Sans","IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --font-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono","IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",ui-monospace,Menlo,Consolas,monospace;
+  --radius:16px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d0e10;--surface:#16181c;--surface-2:#1e2126;--fg:#f2f3f5;--muted:#a0a6b0;--faint:#767c86;--dot:#3a3f47;--line:#2a2d33;
+    --signal:#ffd60a;--signal-ink:#0d0e10;--signal-soft:#2e2806;--mark-line:rgba(255,214,10,.28);--mark-fg:#ffd60a;
+    --ok:#3fcf82;--ok-soft:#0f2c1c;--info:#7fa2ff;--info-soft:#16223f;
+    --band-bg:#16181c;--band-surface:#1f2227;--band-input:#121418;--band-fg:#f3f4f6;--band-muted:#9aa1ab;--band-line:#30343b;
+    --shadow:0 24px 60px -28px rgba(0,0,0,.7);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d0e10;--surface:#16181c;--surface-2:#1e2126;--fg:#f2f3f5;--muted:#a0a6b0;--faint:#767c86;--dot:#3a3f47;--line:#2a2d33;
+  --signal:#ffd60a;--signal-ink:#0d0e10;--signal-soft:#2e2806;--mark-line:rgba(255,214,10,.28);--mark-fg:#ffd60a;
+  --ok:#3fcf82;--ok-soft:#0f2c1c;--info:#7fa2ff;--info-soft:#16223f;
+  --band-bg:#16181c;--band-surface:#1f2227;--band-input:#121418;--band-fg:#f3f4f6;--band-muted:#9aa1ab;--band-line:#30343b;
+  --shadow:0 24px 60px -28px rgba(0,0,0,.7);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.65;word-break:keep-all;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--band-bg)}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--fg);outline-offset:3px;border-radius:6px}
+.band :focus-visible,.bar :focus-visible{outline-color:var(--signal)}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+.eyebrow{display:inline-block;font-size:13.5px;font-weight:600;color:var(--muted)}
+.h2{font-weight:700;font-size:clamp(28px,4.2vw,42px);line-height:1.25;letter-spacing:-.02em;text-wrap:balance}
+.lead{color:var(--muted);font-size:17px;max-width:36em}
+.section{padding-block:104px}
+.sec-head{display:grid;gap:12px;margin-bottom:44px}
+.split{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:48px;align-items:center}
+.split .sec-head{margin-bottom:0}
+mark{background:linear-gradient(transparent 64%,var(--mark-line) 64% 94%,transparent 94%);color:var(--mark-fg);padding-inline:.04em}
+.note{font-size:13px;color:var(--faint);margin-top:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:12px;font-weight:700;font-size:16px;border:1.5px solid transparent;transition:transform .12s ease,background-color .12s ease,border-color .12s ease;white-space:nowrap}
+.btn:active{transform:scale(.98)}
+.btn-signal{background:var(--signal);color:var(--signal-ink)}
+.btn-signal:hover{background:#ffcc00}
+.btn-dark{background:var(--fg);color:var(--bg)}
+.btn-line{border-color:var(--line);background:var(--surface);color:var(--fg)}
+.btn-line:hover{border-color:var(--fg)}
+.btn-sm{min-height:40px;padding:0 16px;font-size:14.5px;border-radius:10px}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;border-radius:999px;padding:3px 10px;white-space:nowrap}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.sig{background:var(--signal-soft);color:var(--fg)}
+.pill.info{background:var(--info-soft);color:var(--info)}
+.pill.mute{background:var(--surface-2);color:var(--muted)}
+.check{flex:none;width:18px;height:18px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:500;color:var(--muted)}
+.chips button[aria-pressed="true"]{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+/* announcement + header */
+.bar{background:var(--band-bg);color:var(--band-fg);font-size:14px}
+.bar .wrap{display:flex;justify-content:center;align-items:center;gap:12px;min-height:40px;flex-wrap:wrap;text-align:center}
+.bar b{color:var(--signal);font-weight:600}
+.bar a{color:var(--band-muted);text-decoration:underline;text-underline-offset:3px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
+.brand svg{flex:none}
+.brand b{font-family:var(--font-display);font-weight:400;font-size:21px;letter-spacing:.02em}
+.brand span{font-size:13px;color:var(--muted);font-weight:500}
+.nav{display:flex;gap:26px;font-size:15px;font-weight:500;color:var(--muted)}
+.nav a:hover{color:var(--fg)}
+.top-cta{display:flex;gap:8px;align-items:center}
+/* hero */
+.hero{padding-block:64px 88px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center}
+.hero .eyebrow{color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+.hero h1{font-family:var(--font-display);font-weight:400;font-size:clamp(38px,5vw,68px);line-height:1.08;letter-spacing:-.015em;margin:22px 0 24px}
+.hero-sub{font-size:clamp(17px,1.8vw,19px);color:var(--muted);max-width:29em}
+.hero-sub strong{color:var(--fg);font-weight:700}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14px;color:var(--muted)}
+.trust li{display:flex;gap:6px;align-items:center}
+.trust svg{color:var(--ok)}
+.quote{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.quote-h{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.quote-h b{font-size:15px}
+.quote-body{padding:18px 20px;display:grid;gap:16px}
+.field{display:grid;gap:8px}
+.field>label,.field>.lbl{font-size:13.5px;font-weight:600;color:var(--muted);display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.field output{font-family:var(--font-mono);font-size:20px;font-weight:600;color:var(--fg)}
+.seg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{display:grid;gap:1px;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer;transition:border-color .12s,background-color .12s}
+.seg label b{font-size:14.5px}
+.seg label span{font-size:12.5px;color:var(--muted)}
+.seg label em{font-style:normal;font-family:var(--font-mono);font-weight:600;font-size:15px;margin-top:3px}
+.seg label em span{font-size:inherit;color:inherit}
+.seg input:checked+label{border-color:var(--fg);background:var(--signal-soft)}
+.seg input:focus-visible+label{outline:2px solid var(--fg);outline-offset:2px}
+input[type=range]{width:100%;accent-color:var(--fg);height:26px;margin:0}
+.date{height:42px;border:1px solid var(--line);border-radius:10px;padding:0 12px;background:var(--surface);font-family:var(--font-mono);font-size:15px}
+.quote-out{background:var(--surface-2);padding:16px 20px 20px;display:grid;gap:12px}
+.qo-total{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.qo-total span{font-size:14px;color:var(--muted)}
+.qo-total b{font-family:var(--font-display);font-weight:400;font-size:clamp(30px,3.6vw,38px);letter-spacing:-.01em}
+.qo-meta{font-size:13.5px;color:var(--muted)}
+.qo-dates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.qo-dates div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0}
+.qo-dates span{display:block;font-size:12px;color:var(--muted)}
+.qo-dates b{display:block;font-size:14.5px;font-weight:700;margin-top:2px}
+.qo-dates div.hl{border-color:var(--fg)}
+.quote .btn{width:100%}
+/* one vs ten thousand */
+.versus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.vcard{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;display:grid;gap:18px;align-content:start}
+.vcard.us{border:2px solid var(--fg)}
+.vcard h3{font-size:18px;font-weight:700;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.vcard h3 small{font-family:var(--font-mono);font-size:13px;font-weight:600;color:var(--muted)}
+.viz{aspect-ratio:1/1;max-width:100%;width:min(100%,280px);justify-self:center;display:grid;place-items:center}
+.viz .one{width:46%;aspect-ratio:1/1;border-radius:50%;background:var(--dot)}
+.viz canvas{width:100%;height:100%;display:block}
+.vcard dl{display:grid;border-top:1px solid var(--line)}
+.vcard dl div{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+.vcard dt{color:var(--muted)}
+.vcard dd{font-weight:700;text-align:right}
+.vcard .legend{display:flex;gap:6px;align-items:center;font-size:13px;color:var(--muted)}
+.vcard .legend i{width:10px;height:10px;border-radius:50%;background:var(--signal);display:inline-block}
+.versus-foot{margin-top:22px;font-size:18px;font-weight:600}
+/* angles */
+.angles{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.angles-h{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 20px;border-bottom:1px solid var(--line)}
+.angles-h b{font-size:15px}
+.angles-h small{color:var(--muted);font-size:13px}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;color:inherit;font-family:inherit;font-size:14.5px;line-height:1.5;min-width:520px}
+th,td{padding:12px 14px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font-size:12.5px;font-weight:600;color:var(--muted);background:var(--surface-2)}
+tbody td{font-variant-numeric:tabular-nums}
+tbody tr:last-child td{border-bottom:0}
+td.l,th.l{text-align:left}
+tr.win td{background:var(--signal-soft);font-weight:700}
+.angle-name{display:flex;align-items:center;gap:8px}
+.angle-name b{font-family:var(--font-mono);font-size:12px;width:22px;height:22px;border-radius:6px;display:grid;place-items:center;background:var(--fg);color:var(--bg)}
+.minibar{display:inline-block;width:70px;height:8px;border-radius:4px;background:var(--surface-2);vertical-align:middle;margin-left:8px;overflow:hidden}
+.minibar i{display:block;height:100%;background:var(--fg);border-radius:4px}
+tr.win .minibar i{background:var(--signal)}
+.angles-foot{padding:14px 20px;border-top:1px solid var(--line);font-size:14.5px;color:var(--muted)}
+.angles-foot b{color:var(--fg)}
+/* filter funnel */
+.funnel-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px}
+.funnel{display:grid;gap:12px}
+.funnel li{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr) 64px;gap:14px;align-items:center}
+.funnel .lab b{display:block;font-size:15px;line-height:1.35}
+.funnel .lab span{display:block;font-size:12.5px;color:var(--muted);line-height:1.4}
+.funnel .track{height:20px;border-radius:5px;background:var(--surface-2);overflow:hidden}
+.funnel .track i{display:block;height:100%;border-radius:5px;background:var(--fg)}
+.funnel li.out .track i{background:var(--signal)}
+.funnel .n{font-family:var(--font-mono);font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.funnel li.out{padding-top:12px;border-top:1px dashed var(--line)}
+/* product tour */
+.tour-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:16px}
+.tab{display:grid;gap:2px;text-align:left;padding:14px 16px;border-radius:12px;border:1px solid var(--band-line);background:transparent;color:var(--band-muted);transition:background-color .15s,border-color .15s,color .15s}
+.tab .t-n{font-size:12.5px;font-weight:600}
+.tab .t-t{font-size:16px;font-weight:700}
+.tab .t-d{font-size:12.5px}
+.tab[aria-selected="true"]{background:var(--band-surface);border-color:var(--signal);color:var(--band-fg)}
+.tab[aria-selected="true"] .t-n{color:var(--signal)}
+.app{background:var(--surface);color:var(--fg);border:1px solid var(--band-line);border-radius:18px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.6)}
+.app-h{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 20px;border-bottom:1px solid var(--line)}
+.app-h .ttl{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-weight:700;font-size:15px}
+.app-h .ttl small{font-weight:500;color:var(--muted);font-size:13px}
+.app-b{padding:20px;min-height:360px}
+.app-note{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,270px);gap:24px;align-items:start}
+.app-side{display:grid;gap:10px;font-size:14.5px}
+.app-side h4{font-size:16px;font-weight:700}
+.app-side p{color:var(--muted)}
+.app-side ul{display:grid;gap:6px}
+.app-side li{display:flex;gap:8px;align-items:flex-start}
+.who{display:flex;align-items:center;gap:10px;font-weight:600}
+.av{width:28px;height:28px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:12px;font-weight:700;color:var(--bg);background:var(--fg)}
+.guide{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.guide div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);font-size:14.5px}
+.guide div:last-child{border-bottom:0}
+.guide div.hl{background:var(--signal-soft)}
+.guide dt{font-weight:700}
+.guide dd{color:var(--muted)}
+.guide div.hl dd{color:var(--fg)}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:18px}
+.kpi{border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.kpi span{display:block;font-size:13px;color:var(--muted)}
+.kpi b{display:block;font-family:var(--font-mono);font-size:24px;font-weight:600;margin-top:2px}
+.kpi b small{font-size:14px;color:var(--muted);font-weight:500}
+.kpi.hl{background:var(--signal-soft);border-color:transparent}
+.bars{display:grid;gap:8px}
+.bars li{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr) 90px;gap:12px;align-items:center;font-size:14px}
+.bars .track{height:10px;border-radius:5px;background:var(--surface-2);overflow:hidden}
+.bars .track i{display:block;height:100%;border-radius:5px;background:var(--fg)}
+.bars li:first-child .track i{background:var(--signal)}
+.bars .v{font-family:var(--font-mono);font-size:13px;color:var(--muted);text-align:right}
+.sample-note{margin-top:14px;font-size:13px;color:var(--band-muted)}
+/* budget */
+.budget{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:40px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:34px}
+.budget .field output{font-size:28px}
+.vs{display:grid;gap:16px}
+.vs-row{display:grid;gap:8px}
+.vs-row .top-line{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.vs-row .name{font-weight:700}
+.vs-row .name small{font-weight:500;color:var(--muted);font-size:13px;margin-left:6px}
+.vs-row .cnt{font-family:var(--font-display);font-size:28px;line-height:1}
+.vs-row .cnt small{font-family:var(--font-body);font-size:14px;color:var(--muted);margin-left:2px}
+.vs-row .track{height:12px;border-radius:6px;background:var(--surface-2);overflow:hidden}
+.vs-row .track i{display:block;height:100%;border-radius:6px;background:var(--faint);transition:width .3s ease}
+.vs-row.us .track i{background:var(--signal)}
+.vs-row.mid .track i{background:var(--fg)}
+.vs-sum{font-size:15px;color:var(--muted)}
+.vs-sum b{color:var(--fg)}
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.plan-card{position:relative;background:var(--surface);border:1.5px solid var(--line);border-radius:20px;padding:30px;display:grid;gap:10px;align-content:start}
+.plan-card.main{border:2px solid var(--fg)}
+.plan-card .ribbon{position:absolute;top:-13px;left:26px;background:var(--signal);color:var(--signal-ink);font-size:12.5px;font-weight:700;border-radius:999px;padding:4px 12px}
+.plan-card h3{font-size:21px;font-weight:700}
+.plan-card .who-sel{color:var(--muted);font-size:15px}
+.plan-card .amt{font-family:var(--font-display);font-size:clamp(50px,6vw,68px);line-height:1;margin-top:10px}
+.plan-card .amt small{font-family:var(--font-body);font-size:16px;color:var(--muted);margin-left:6px}
+.plan-card ul{display:grid;gap:8px;margin-top:12px;padding-top:16px;border-top:1px dashed var(--line);font-size:15px}
+.plan-card li{display:flex;gap:8px;align-items:flex-start}
+.plan-extra{margin-top:16px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;background:var(--signal-soft);border-radius:20px;padding:26px 28px}
+.plan-extra h4{font-size:14px;font-weight:700;margin-bottom:10px}
+.plan-extra ul{display:grid;gap:7px;font-size:15px}
+.plan-extra li{display:flex;gap:8px;align-items:flex-start}
+.plan-extra .no li{color:var(--muted)}
+.plan-extra .no svg{color:var(--faint)}
+.ladder{display:grid;gap:8px}
+.ladder div{display:flex;justify-content:space-between;gap:10px;font-size:15px;border-bottom:1px solid color-mix(in srgb,var(--fg) 12%,transparent);padding-bottom:7px}
+.ladder b{font-family:var(--font-mono)}
+.cmp-wrap{margin-top:20px;overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.cmp{min-width:720px}
+.cmp th,.cmp td{text-align:left;white-space:normal;padding:14px 18px;vertical-align:top}
+.cmp thead th.us{background:var(--signal);color:var(--signal-ink)}
+.cmp tbody th{font-weight:600;color:var(--muted);width:20%}
+.cmp td.us{font-weight:700;background:var(--signal-soft)}
+.fine{margin-top:12px;font-size:13px;color:var(--muted)}
+/* faq */
+.faq-cats{margin-bottom:20px}
+.faq{border-top:2px solid var(--fg);max-width:860px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:20px;font-weight:700;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font-family:var(--font-mono);font-size:20px;color:var(--muted);transition:transform .15s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding-bottom:22px;color:var(--muted);max-width:42em}
+/* band + start */
+.band{background:var(--band-bg);color:var(--band-fg)}
+.band .eyebrow{color:var(--band-muted)}
+.band .lead{color:var(--band-muted)}
+.start{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.start .h2{margin-block:12px 16px}
+.promise{display:grid;gap:12px;margin-top:28px}
+.promise li{display:flex;gap:12px;align-items:baseline}
+.promise .k{flex:none;width:96px;font-size:14px;font-weight:700;color:var(--signal)}
+.flow{margin-top:32px;padding-top:24px;border-top:1px solid var(--band-line)}
+.flow h3{font-size:16px;font-weight:700;margin-bottom:14px}
+.flow ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;counter-reset:step}
+.flow li{counter-increment:step;border:1px solid var(--band-line);border-radius:12px;padding:12px 14px;display:grid;gap:2px;align-content:start}
+.flow li::before{content:counter(step);font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--signal)}
+.flow li b{font-size:15px}
+.flow li span{font-size:13px;color:var(--band-muted);line-height:1.5}
+.form{background:var(--band-surface);border:1px solid var(--band-line);border-radius:var(--radius);padding:28px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.full{grid-column:1/-1}
+.f{display:grid;gap:6px;min-width:0}
+.f>label,.f>.lbl{font-size:14px;font-weight:600}
+.f label em,.f .lbl em{font-style:normal;color:var(--signal)}
+.f input:not([type=radio]),.f textarea,.f select{width:100%;min-height:48px;border:1.5px solid var(--band-line);border-radius:10px;background:var(--band-input);color:var(--band-fg);padding:10px 12px;font-size:15.5px}
+.f textarea{min-height:88px;resize:vertical}
+.f input::placeholder,.f textarea::placeholder{color:var(--band-muted);opacity:.75}
+.f input:focus,.f textarea:focus,.f select:focus{outline:none;border-color:var(--signal)}
+.f .err{display:none;font-size:13px;color:var(--signal)}
+.f.bad input,.f.bad select{border-color:var(--signal)}
+.f.bad .err{display:block}
+.band .seg label{border-color:var(--band-line)}
+.band .seg label span{color:var(--band-muted)}
+.band .seg label em,.band .seg label em span{color:var(--band-fg)}
+.band .seg input:checked+label{border-color:var(--signal);background:transparent}
+.band .seg input:checked+label em,.band .seg input:checked+label em span{color:var(--signal)}
+.agree{display:flex;gap:10px;align-items:center;font-size:14px;color:var(--band-muted);margin-block:18px}
+.agree input{width:18px;height:18px;accent-color:var(--signal)}
+.agree a{color:var(--band-fg);text-decoration:underline;text-underline-offset:3px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-err{margin-top:10px;font-size:13.5px;color:var(--signal);text-align:center}
+.btn[disabled]{opacity:.6;cursor:wait}
+.agree.bad{color:var(--signal)}
+.form .btn{width:100%}
+.form-fine{margin-top:10px;font-size:12.5px;color:var(--band-muted);text-align:center}
+.done h3{font-family:var(--font-display);font-weight:400;font-size:28px;margin-bottom:6px}
+.done p{color:var(--band-muted)}
+.done dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 18px;margin-block:20px;padding:18px;border:1px solid var(--band-line);border-radius:12px;font-size:15px}
+.done dt{color:var(--band-muted)}
+.done dd{font-weight:600;overflow-wrap:anywhere}
+.done .btn{width:auto}
+footer{padding-block:44px 60px;font-size:13.5px;color:var(--muted);border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
+.foot p{line-height:1.9}
+.foot nav{display:flex;gap:18px;flex-wrap:wrap}
+@media (max-width:980px){
+  .nav{display:none}
+  .hero-grid,.budget,.start,.split{grid-template-columns:1fr}
+  .hero-grid,.split{gap:36px}
+  .tour-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .app-note{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .plan-extra{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .versus,.plans{grid-template-columns:1fr}
+  .viz{width:min(100%,210px)}
+  .plans{gap:28px}
+  .funnel li{grid-template-columns:minmax(0,1fr) 56px}
+  .funnel .track{grid-column:1/-1;grid-row:2}
+}
+@media (max-width:560px){
+  .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .section{padding-block:72px}
+  .hero{padding-block:40px 64px}
+  .brand span,.top-cta .btn-line,.bar a{display:none}
+  .bar{font-size:13px}
+  .bar .wrap{padding-block:6px}
+  .hero-cta .btn{flex:1 1 100%}
+  .qo-dates{grid-template-columns:1fr}
+  .app-b{padding:16px}
+  .guide div{grid-template-columns:1fr;gap:2px}
+  .bars li{grid-template-columns:minmax(0,1fr) 80px}
+  .bars .track{grid-column:1/-1;grid-row:2}
+  .budget,.plan-card,.plan-extra,.funnel-card,.vcard{padding:22px}
+  .grid2,.flow ol{grid-template-columns:1fr}
+  .form{padding:20px}
+  .kpi b{font-size:20px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <div class="wrap"><span>인당 <b data-price="match">149,000</b>원 · 리스트 <b>3일</b> · 게시 <b>5일</b> 뒤부터 소구점별 리포트</span><a href="#pricing">가격 보기</a></div>
+</div>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a href="#home" class="brand" aria-label="패스트파인드 처음으로">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="8" style="fill:var(--signal)"/><circle cx="17" cy="13" r="6" style="fill:none;stroke:var(--signal-ink)" stroke-width="2.6"/><path d="M21.3 17.3l4 4" style="stroke:var(--signal-ink)" stroke-width="2.8" stroke-linecap="round"/><path d="M4.5 10.5h5M3.5 14h5M4.5 17.5h5" style="stroke:var(--signal-ink)" stroke-width="2" stroke-linecap="round"/></svg>
+      <b>FASTFIND</b><span>패스트파인드</span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#why">왜 많이</a>
+      <a href="#angle">소구점</a>
+      <a href="#tour">진행 방식</a>
+      <a href="#pricing">가격</a>
+      <a href="#faq">자주 묻는 질문</a>
+    </nav>
+    <div class="top-cta">
+      <a href="#start" class="btn btn-line btn-sm">상담 신청</a>
+      <a href="#start" class="btn btn-signal btn-sm">캠페인 시작</a>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">인플루언서 마케팅 좀 해 본 팀을 위한</span>
+        <h1>가장 빠른<br><mark>인플루언서 플랫폼</mark></h1>
+        <p class="hero-sub">대행사 쓰는 진짜 이유, 결국 데이터잖아요. <strong>우리 제품을 어떤 말로 소개해야 팔리는지.</strong> 그건 많이, 빨리 뿌려 봐야 보입니다.</p>
+        <div class="hero-cta">
+          <a href="#start" class="btn btn-signal">캠페인 시작하기</a>
+          <a href="#why" class="btn btn-line">왜 많이 뿌려야 하나</a>
+        </div>
+        <ul class="trust" aria-label="기본 조건">
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>광고·품앗이 계정 제외</li>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>기획안·대본 컨펌 없음</li>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>확정 전 취소 무료</li>
+        </ul>
+      </div>
+
+      <form class="quote" id="quote" aria-label="바로 견적">
+        <div class="quote-h"><b>새 캠페인 견적</b><span class="pill sig">로그인 없이 바로</span></div>
+        <div class="quote-body">
+          <div class="field">
+            <span class="lbl">진행 방식</span>
+            <div class="seg" role="radiogroup" aria-label="진행 방식">
+              <input type="radio" name="qPlan" id="qPlanMatch" value="match" checked><label for="qPlanMatch"><b>패스트 매칭</b><span>저희가 골라 확정</span><em>인당 <span data-price="match">149,000</span>원</em></label>
+              <input type="radio" name="qPlan" id="qPlanPick" value="pick"><label for="qPlanPick"><b>직접 선택</b><span>리스트에서 직접 고름</span><em>인당 <span data-price="pick">199,000</span>원</em></label>
+            </div>
+          </div>
+          <div class="field">
+            <span class="lbl">카테고리</span>
+            <div class="chips" id="qCats" role="group" aria-label="카테고리"></div>
+          </div>
+          <div class="field">
+            <label for="qPeople">인플루언서 수 <output id="qPeopleOut" for="qPeople">30명</output></label>
+            <input type="range" id="qPeople" min="10" max="1000" step="10" value="30">
+            <div class="chips" id="qQuick" role="group" aria-label="자주 쓰는 인원"></div>
+          </div>
+          <div class="field">
+            <label for="qStart">요청일</label>
+            <input type="date" id="qStart" class="date">
+          </div>
+        </div>
+        <div class="quote-out" aria-live="polite">
+          <div class="qo-total"><span>예상 금액 (VAT 별도)</span><b id="qTotal">0원</b></div>
+          <p class="qo-meta" id="qMeta"></p>
+          <div class="qo-dates">
+            <div class="hl"><span id="qListLbl">확정 리스트 도착</span><b id="qList">-</b></div>
+            <div><span>영상 게시</span><b>제품 받고 7일 안</b></div>
+            <div><span>결과 리포트</span><b>게시 5일 뒤부터</b></div>
+          </div>
+          <button type="submit" class="btn btn-dark">이 조건으로 시작하기</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" id="why" style="padding-top:24px">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">왜 많이</span>
+        <h2 class="h2">팔로워 1,000만 한 명보다<br>팔로워 1,000명 <mark>만 명</mark></h2>
+        <p class="lead">총 팔로워는 똑같이 1,000만입니다. 끝나고 손에 남는 게 다를 뿐이에요.</p>
+      </div>
+      <div class="versus">
+        <article class="vcard">
+          <h3>팔로워 1,000만 <small>× 1명</small></h3>
+          <div class="viz" aria-hidden="true"><span class="one"></span></div>
+          <dl>
+            <div><dt>올라가는 영상</dt><dd>1편</dd></div>
+            <div><dt>시험해 볼 수 있는 소구점</dt><dd>1개</dd></div>
+            <div><dt>반응을 볼 댓글창</dt><dd>1곳</dd></div>
+            <div><dt>안 터지면</dt><dd>이유를 모름</dd></div>
+          </dl>
+        </article>
+        <article class="vcard us">
+          <h3>팔로워 1,000 <small>× 10,000명</small></h3>
+          <div class="viz"><canvas id="dots" role="img" aria-label="점 1만 개 중 일부가 노란색으로 표시된 그림. 반응이 좋았던 영상을 뜻함"></canvas></div>
+          <dl>
+            <div><dt>올라가는 영상</dt><dd>10,000편</dd></div>
+            <div><dt>시험해 볼 수 있는 소구점</dt><dd>원하는 만큼</dd></div>
+            <div><dt>반응을 볼 댓글창</dt><dd>10,000곳</dd></div>
+            <div><dt>안 터지면</dt><dd>터진 것만 보면 됨</dd></div>
+          </dl>
+          <p class="legend"><i></i>반응이 좋았던 영상 (예시)</p>
+        </article>
+      </div>
+      <p class="versus-foot">한 번에 크게 거는 것보다, 작게 많이 뿌려서 이기는 말을 찾는 쪽이 빠릅니다.</p>
+    </div>
+  </section>
+
+  <section class="section" id="angle" style="padding-top:0">
+    <div class="wrap split">
+      <div class="sec-head">
+        <span class="eyebrow">결국 알고 싶은 것</span>
+        <h2 class="h2">우리 제품,<br>어떤 말로 팔아야 하는지</h2>
+        <p class="lead">소구점은 회의로 정하는 것보다 뿌려 보고 고르는 게 빠릅니다. 가이드에 시험해 볼 소구점을 두세 개 적어 주세요. 인원을 나눠 보내고, 결과를 소구점별로 비교해 드립니다.</p>
+      </div>
+      <div class="angles">
+        <div class="angles-h"><b>소구점별 반응</b><small>수분 크림 · 30명 · 게시 7일 차 예시</small></div>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th scope="col">소구점</th><th scope="col">영상</th><th scope="col">평균 조회</th><th scope="col">저장률</th><th scope="col">CPV</th></tr></thead>
+            <tbody id="angleRows"></tbody>
+          </table>
+        </div>
+        <p class="angles-foot" id="angleFoot"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="filter" style="padding-top:0">
+    <div class="wrap split">
+      <div class="sec-head">
+        <span class="eyebrow">이 가격에 괜찮냐고요</span>
+        <h2 class="h2">싸다고 아무나<br>보내지 않습니다</h2>
+        <p class="lead">많이 뿌린 데이터가 쓸모 있으려면 한 명 한 명이 진짜여야 하니까요. 자체 알고리즘으로 광고 계정과 품앗이 계정부터 지우고, 남은 사람 중에서도 이렇게 거릅니다.</p>
+      </div>
+      <div class="funnel-card">
+        <ol class="funnel" id="funnel"></ol>
+        <p class="note">스킨케어 캠페인 하나를 가정한 예시 숫자입니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" id="tour">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">진행 방식</span>
+        <h2 class="h2">네 단계만 합니다.<br>단계마다 화면으로 확인하세요</h2>
+      </div>
+      <div class="tour-tabs" role="tablist" aria-label="진행 단계">
+        <button class="tab" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true"><span class="t-n">STEP 1 · 3일 이내</span><span class="t-t">맞춤 인플루언서 소싱</span><span class="t-d">확정 명단 또는 후보 리스트</span></button>
+        <button class="tab" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1"><span class="t-n">STEP 2 · 확정 당일</span><span class="t-t">가이드 전달</span><span class="t-d">소구점 나눠 배정</span></button>
+        <button class="tab" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1"><span class="t-n">STEP 3 · 제품 받고 7일</span><span class="t-t">영상 수합과 게시</span><span class="t-d">링크·원본·PA 코드</span></button>
+        <button class="tab" role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false" tabindex="-1"><span class="t-n">STEP 4 · 게시 5일 뒤부터</span><span class="t-t">결과 리포트</span><span class="t-d">소구점별 비교·추천 영상</span></button>
+      </div>
+
+      <div class="app">
+        <div class="app-h"><span class="ttl">수분 크림 런칭 시딩 <small>스킨케어 · 20~30대 여성 · 30명</small></span><span class="pill mute" id="appStage"></span></div>
+        <div class="app-b">
+          <div role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+            <div class="app-note">
+              <div class="tbl-wrap">
+                <table>
+                  <thead><tr><th scope="col">인플루언서</th><th scope="col">팔로워</th><th scope="col">최근 평균 조회</th><th scope="col">광고 비율</th><th scope="col">가이드 준수</th><th scope="col" class="l">상태</th></tr></thead>
+                  <tbody id="listRows"></tbody>
+                </table>
+              </div>
+              <div class="app-side">
+                <h4>두 가지로 받습니다</h4>
+                <p>패스트 매칭은 저희가 고른 확정 명단이, 직접 선택은 필요 인원의 1.5배 후보가 3일 안에 옵니다.</p>
+                <ul>
+                  <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>팔로워 500 ~ 3만, 규모 상관없이 같은 가격</li>
+                  <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>광고·품앗이 계정은 이미 빠진 상태</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
+            <div class="app-note">
+              <dl class="guide">
+                <div class="hl"><dt>소구점 배정</dt><dd>A 속건조 12명 · B 화장 밀착 10명 · C 세라마이드 8명</dd></div>
+                <div><dt>필수 표기</dt><dd>본문 첫 줄에 #광고 또는 #협찬</dd></div>
+                <div><dt>꼭 보여줄 장면</dt><dd>제형 클로즈업, 바르고 난 뒤 피부 결</dd></div>
+                <div><dt>금지 표현</dt><dd>치료, 완치처럼 의약품으로 오인될 수 있는 표현</dd></div>
+                <div><dt>업로드 기한</dt><dd>제품 받은 날부터 7일 안, 게시 후 6개월 유지</dd></div>
+              </dl>
+              <div class="app-side">
+                <h4>기획안 대신 한 장</h4>
+                <p>지켜야 할 것과 시험해 볼 소구점만 적습니다. 확정된 전원에게 보내고 받았는지까지 확인해요.</p>
+                <ul>
+                  <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>30명 중 30명 수신 확인</li>
+                  <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>가이드와 다르면 한 번 수정 요청</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th scope="col">인플루언서</th><th scope="col" class="l">소구점</th><th scope="col" class="l">진행 상태</th><th scope="col" class="l">게시물</th><th scope="col">게시일</th><th scope="col">조회</th></tr></thead>
+                <tbody id="statusRows"></tbody>
+              </table>
+            </div>
+          </div>
+          <div role="tabpanel" id="panel-4" aria-labelledby="tab-4" hidden>
+            <div class="kpis">
+              <div class="kpi"><span>게시 완료</span><b>30<small> / 30</small></b></div>
+              <div class="kpi"><span>총 조회</span><b id="viewsAll">0<small>만</small></b></div>
+              <div class="kpi hl"><span>이긴 소구점</span><b style="font-family:var(--font-body);font-size:20px">A 속건조</b></div>
+              <div class="kpi"><span>평균 CPV</span><b id="cpvAll">0<small>원</small></b></div>
+            </div>
+            <h4 style="font-size:15px;margin-bottom:10px">광고 소재로 돌릴 영상</h4>
+            <ol class="bars" id="topBars"></ol>
+          </div>
+        </div>
+      </div>
+      <p class="sample-note">화면 속 계정과 수치는 이해를 돕기 위한 예시입니다.</p>
+    </div>
+  </section>
+
+  <section class="section" id="budget">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">예산 비교</span>
+        <h2 class="h2">같은 예산이면 영상이 몇 개 나올까요</h2>
+        <p class="lead">영상 하나가 데이터 하나입니다.</p>
+      </div>
+      <div class="budget">
+        <div class="field">
+          <label for="bAmt">캠페인 예산 (VAT 별도) <output id="bAmtOut" for="bAmt">300만원</output></label>
+          <input type="range" id="bAmt" min="1000000" max="100000000" step="1000000" value="3000000">
+          <div class="chips" id="bQuick" role="group" aria-label="자주 쓰는 예산"></div>
+        </div>
+        <div class="vs" aria-live="polite">
+          <div class="vs-row us"><div class="top-line"><span class="name">패스트 매칭<small id="bMatchUnit"></small></span><span class="cnt" id="bMatch">0<small>편</small></span></div><div class="track"><i id="bMatchBar"></i></div></div>
+          <div class="vs-row mid"><div class="top-line"><span class="name">직접 선택<small id="bPickUnit"></small></span><span class="cnt" id="bPick">0<small>편</small></span></div><div class="track"><i id="bPickBar"></i></div></div>
+          <div class="vs-row"><div class="top-line"><span class="name">제작형 대행<small>인당 30만원 기준</small></span><span class="cnt" id="bAg">0<small>편</small></span></div><div class="track"><i id="bAgBar"></i></div></div>
+          <p class="vs-sum" id="bSum"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">가격</span>
+        <h2 class="h2">고르는 사람만 다르고<br>나머지는 똑같습니다</h2>
+      </div>
+      <div class="plans">
+        <article class="plan-card main">
+          <span class="ribbon">많이 뿌릴 때</span>
+          <h3>패스트 매칭</h3>
+          <p class="who-sel">필터를 통과한 사람 중에서 저희가 골라 확정합니다.</p>
+          <p class="amt"><span data-price="match">149,000</span><small>원 / 인</small></p>
+          <ul>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>확정 명단 3일 안에 도착</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>고르는 데 시간 안 씀</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>소구점 테스트처럼 숫자가 필요할 때</li>
+          </ul>
+        </article>
+        <article class="plan-card">
+          <h3>직접 선택</h3>
+          <p class="who-sel">같은 필터를 통과한 리스트에서 직접 고릅니다.</p>
+          <p class="amt"><span data-price="pick">199,000</span><small>원 / 인</small></p>
+          <ul>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>필요 인원의 1.5배 후보 3일 안에 도착</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>마음에 드는 계정만 확정, 교체 요청 1회</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>브랜드 톤이 까다로울 때</li>
+          </ul>
+        </article>
+      </div>
+      <div class="plan-extra">
+        <div>
+          <h4>두 방식 모두 포함</h4>
+          <ul>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>인플루언서 원고료</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>광고·품앗이 계정 필터</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>가이드 작성, 소구점 배정</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>게시 링크, 원본 mp4, PA 코드</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>소구점별 결과 리포트</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>게시물 6개월 유지</li>
+          </ul>
+        </div>
+        <div class="no">
+          <h4>안 하는 것</h4>
+          <ul>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>기획안 작성</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>대본·초안 컨펌</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>팔로워 3만 넘는 섭외</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>광고 집행 대행</li>
+          </ul>
+        </div>
+        <div>
+          <h4>많이 하면</h4>
+          <div class="ladder" id="ladder"></div>
+          <p class="fine">최소 <span data-min>10</span>명 · VAT, 제품 원가, 배송비 별도</p>
+        </div>
+      </div>
+
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <thead><tr><th scope="col">비교</th><th scope="col" class="us">패스트파인드</th><th scope="col">제작형 대행</th><th scope="col">검색 툴로 직접 운영</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">비용</th><td class="us">인당 <span data-price="match">149,000</span>원 · 직접 선택 <span data-price="pick">199,000</span>원</td><td>인당 30만원~</td><td>월 구독료 + 인플루언서 비용 별도</td></tr>
+            <tr><th scope="row">리스트 받기까지</th><td class="us">3일 이내</td><td>업체마다 다름</td><td>직접 검색</td></tr>
+            <tr><th scope="row">기획·컨펌</th><td class="us">가이드 한 장</td><td>기획안·대본·초안 단계별</td><td>직접 진행</td></tr>
+            <tr><th scope="row">섭외·전달·수합</th><td class="us">대신 합니다</td><td>대신 합니다</td><td>직접 DM과 관리</td></tr>
+            <tr><th scope="row">결과 보고</th><td class="us">게시 5일 차 1차, 30일 차 최종 · 소구점별</td><td>업체마다 다름</td><td>툴로 직접 집계</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine" id="priceFine"></p>
+    </div>
+  </section>
+
+  <section class="section" id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">자주 묻는 질문</span>
+        <h2 class="h2">짧게 답합니다</h2>
+      </div>
+      <div class="chips faq-cats" id="faqCats" role="group" aria-label="질문 분류"></div>
+      <div class="faq" id="faqList"></div>
+    </div>
+  </section>
+
+  <section class="section band" id="start">
+    <div class="wrap start">
+      <div>
+        <span class="eyebrow">캠페인 시작</span>
+        <h2 class="h2">오늘 요청하면<br><span style="color:var(--signal)">3일 안에 리스트</span>가 옵니다</h2>
+        <p class="lead">리스트까지는 무료예요. 받아 보고 아니다 싶으면 안 하셔도 됩니다.</p>
+        <ul class="promise">
+          <li><span class="k">3일 이내</span><span>확정 명단, 또는 1.5배 후보 리스트</span></li>
+          <li><span class="k">확정 전</span><span>취소해도 비용 없음</span></li>
+          <li><span class="k">게시 5일 뒤~</span><span>링크, 원본 파일, 소구점별 리포트</span></li>
+        </ul>
+        <div class="flow">
+          <h3>요청하시면 이렇게 연락드려요</h3>
+          <ol>
+            <li><b>문자</b><span>접수 확인, 통화 편한 시간 여쭤보기</span></li>
+            <li><b>전화</b><span>제품, 타깃, 인원, 시험할 소구점 확인</span></li>
+            <li><b>화상 미팅</b><span>받은 리스트 같이 보고 조건 확정</span></li>
+          </ol>
+        </div>
+      </div>
+      <div class="form">
+        <form id="form" novalidate>
+          <div class="grid2">
+            <div class="f full"><span class="lbl">진행 방식 <em>*</em></span>
+              <div class="seg" role="radiogroup" aria-label="진행 방식">
+                <input type="radio" name="fPlan" id="fPlanMatch" value="match" checked><label for="fPlanMatch"><b>패스트 매칭</b><span>저희가 골라 확정</span><em>인당 <span data-price="match">149,000</span>원</em></label>
+                <input type="radio" name="fPlan" id="fPlanPick" value="pick"><label for="fPlanPick"><b>직접 선택</b><span>리스트에서 직접 고름</span><em>인당 <span data-price="pick">199,000</span>원</em></label>
+              </div>
+            </div>
+            <div class="f"><label for="fBrand">브랜드명 <em>*</em></label><input id="fBrand" autocomplete="organization" placeholder="예) 오늘의 스킨"><span class="err">브랜드명을 적어 주세요.</span></div>
+            <div class="f"><label for="fName">담당자 <em>*</em></label><input id="fName" autocomplete="name" placeholder="홍길동"><span class="err">담당자 이름을 적어 주세요.</span></div>
+            <div class="f"><label for="fPhone">연락처 <em>*</em></label><input id="fPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="010-0000-0000"><span class="err">연락 가능한 번호를 적어 주세요.</span></div>
+            <div class="f"><label for="fTime">통화 편한 시간</label><select id="fTime"><option>언제든</option><option>오전 (10~12시)</option><option>오후 (13~17시)</option><option>저녁 (18시 이후)</option></select></div>
+            <div class="f"><label for="fCat">카테고리 <em>*</em></label><select id="fCat"><option value="">선택</option></select><span class="err">카테고리를 골라 주세요.</span></div>
+            <div class="f"><label for="fQty">인플루언서 수</label><input id="fQty" type="number" inputmode="numeric" min="10" step="10" placeholder="30"></div>
+            <div class="f full"><label for="fMail">이메일 (화상 미팅 링크 받을 곳)</label><input id="fMail" type="email" autocomplete="email" placeholder="name@brand.com"><span class="err">이메일 형식을 확인해 주세요.</span></div>
+            <div class="f full"><label for="fMemo">제품과 시험해 볼 소구점</label><textarea id="fMemo" placeholder="예) 수분 크림. 속건조 / 화장 밀착 / 세라마이드 성분 중에 뭐가 먹히는지 보고 싶어요."></textarea></div>
+          </div>
+          <div class="hp" aria-hidden="true"><label for="fWebsite">웹사이트</label><input id="fWebsite" name="company_website" tabindex="-1" autocomplete="off"></div>
+          <label class="agree" id="agreeRow"><input type="checkbox" id="fAgree"> <span>상담을 위한 개인정보 수집·이용에 동의합니다 (필수) · <a href="privacy.html" target="_blank" rel="noopener">자세히</a></span></label>
+          <button type="submit" class="btn btn-signal" id="fSubmit">리스트 요청하기</button>
+          <p class="form-err" id="formErr" hidden></p>
+          <p class="form-fine" id="formFine">시안 페이지라 실제로 접수되지는 않습니다.</p>
+        </form>
+        <div class="done" id="done" hidden>
+          <h3>요청을 받았습니다</h3>
+          <p id="doneMsg">곧 문자로 먼저 연락드릴게요.</p>
+          <dl id="doneDl"></dl>
+          <button type="button" class="btn btn-line" id="again">다시 작성</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a href="#home" class="brand" aria-label="패스트파인드 처음으로"><b>FASTFIND</b><span>패스트파인드</span></a>
+      <p style="margin-top:12px" id="opInfo">(주)회사명 · 대표 OOO · 사업자등록번호 000-00-00000<br>서울시 OO구 OO로 00 · 문의 000-0000-0000</p>
+    </div>
+    <div>
+      <nav aria-label="하단 메뉴"><a href="#why">왜 많이</a><a href="#tour">진행 방식</a><a href="#pricing">가격</a><a href="#faq">자주 묻는 질문</a><a href="#start">캠페인 시작</a><a href="privacy.html" target="_blank" rel="noopener">개인정보처리방침</a></nav>
+      <p style="margin-top:12px" id="siteNote">컨셉 시안 · 운영 정책은 추천안, 화면 속 데이터는 가상 예시입니다.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// 설정값: 가격·정책이 바뀌면 여기만 고치면 페이지 전체에 반영됩니다.
+const CONFIG = {
+  plans: {
+    match: { name: '패스트 매칭', price: 149000, listLabel: '확정 리스트 도착', listNote: '확정 명단을' },
+    pick:  { name: '직접 선택', price: 199000, listLabel: '후보 리스트 도착', listNote: '필요 인원의 1.5배 후보 리스트를' }
+  },
+  minPeople: 10,
+  listDays: 3,
+  discounts: [{ min: 100, rate: 0.10 }, { min: 1000, rate: 0.20 }],
+  adRights: 20000,         // 원본 영상 2차 활용 6개월, 편당 (리포트 보고 원하는 영상만)
+  keepMonths: 6,           // 게시물 유지 기간
+  agencyRef: 300000,       // 비교용 제작형 대행 인당 단가
+  vat: 0.1
+};
+const CATS = ['뷰티', 'F&B', '리빙', '육아', '헬스', '패션', '반려동물'];
+
+// 공개 배포 설정: deploy/config.js가 window.FF_CONFIG를 채웁니다. 없으면(시안 미리보기) 접수 없이 화면만 동작합니다.
+const RUNTIME = Object.assign({ formEndpoint: '', metaPixelId: '', operator: null }, window.FF_CONFIG || {});
+const LIVE = !!window.FF_CONFIG;
+const track = (event, params, custom) => {
+  try { if (typeof window.fbq === 'function') window.fbq(custom ? 'trackCustom' : 'track', event, params || {}); } catch (err) { /* 픽셀이 없어도 페이지는 그대로 */ }
+};
+// 광고 유입 추적: 처음 들어온 주소의 UTM·fbclid를 신청과 함께 시트로 보냅니다.
+const ATTR = (() => {
+  const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid'];
+  let saved = {};
+  try { saved = JSON.parse(sessionStorage.getItem('ff_attr') || '{}'); } catch (err) { saved = {}; }
+  const qs = new URLSearchParams(location.search), found = {};
+  keys.forEach(k => { if (qs.get(k)) found[k] = qs.get(k).slice(0, 200); });
+  const attr = Object.keys(found).length ? found : saved;
+  try { sessionStorage.setItem('ff_attr', JSON.stringify(attr)); } catch (err) { /* 저장 못 해도 진행 */ }
+  return attr;
+})();
+if (LIVE) {
+  const op = RUNTIME.operator || {};
+  const opEl = document.getElementById('opInfo');
+  opEl.replaceChildren();
+  if (op.name) {
+    const line1 = [op.name, op.ceo && `대표 ${op.ceo}`, op.bizNo && `사업자등록번호 ${op.bizNo}`].filter(Boolean).join(' · ');
+    const line2 = [op.address, op.phone && `문의 ${op.phone}`, op.email].filter(Boolean).join(' · ');
+    opEl.append(line1, document.createElement('br'), line2);
+  } else {
+    opEl.textContent = '출시 준비 중인 서비스로, 지금은 사전 신청을 받고 있습니다.';
+  }
+  document.getElementById('siteNote').textContent = '화면 속 계정과 수치는 이해를 돕기 위한 예시입니다.';
+  document.getElementById('formFine').textContent = RUNTIME.formEndpoint ? '남겨 주신 정보는 상담 연락에만 씁니다.' : '접수 설정 전입니다. 지금은 신청이 저장되지 않습니다.';
+}
+
+const won = n => Math.round(n).toLocaleString('ko-KR');
+const krw = n => {
+  const eok = Math.floor(n / 1e8), man = Math.round((n % 1e8) / 1e4);
+  return (eok ? eok + '억' : '') + (man ? (eok ? ' ' : '') + man.toLocaleString('ko-KR') + '만' : '') + '원';
+};
+const rateFor = q => CONFIG.discounts.reduce((r, d) => (q >= d.min ? d.rate : r), 0);
+const unitFor = (plan, q) => CONFIG.plans[plan].price * (1 - rateFor(q));
+const costFor = (plan, q) => unitFor(plan, q) * q;
+const fmtDate = d => d.toLocaleDateString('ko-KR', { month: 'long', day: 'numeric', weekday: 'short' });
+const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+document.querySelectorAll('[data-price]').forEach(el => { el.textContent = won(CONFIG.plans[el.dataset.price].price); });
+document.querySelectorAll('[data-min]').forEach(el => { el.textContent = CONFIG.minPeople; });
+document.getElementById('ladder').innerHTML = [`<div><span>${CONFIG.minPeople}명부터</span><b>정가</b></div>`]
+  .concat(CONFIG.discounts.map(d => `<div><span>${d.min.toLocaleString('ko-KR')}명 이상</span><b>${Math.round(d.rate * 100)}% 할인</b></div>`)).join('');
+document.getElementById('priceFine').textContent =
+  `비교 단가는 2026년 10월 국내 업체 공개 가격을 참고한 예시이며 업체·조건에 따라 다릅니다. 원본 영상 2차 활용(6개월)은 리포트를 보고 원하는 영상만 편당 ${won(CONFIG.adRights)}원에 추가할 수 있습니다.`;
+
+/* 바로 견적 */
+(() => {
+  let cat = CATS[0];
+  const cats = document.getElementById('qCats'), quick = document.getElementById('qQuick');
+  cats.innerHTML = CATS.map((c, i) => `<button type="button" aria-pressed="${i === 0}">${c}</button>`).join('');
+  quick.innerHTML = [30, 100, 300, 1000].map(n => `<button type="button" data-n="${n}" aria-pressed="${n === 30}">${n.toLocaleString('ko-KR')}명</button>`).join('');
+  const people = document.getElementById('qPeople'), start = document.getElementById('qStart');
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  start.valueAsDate = new Date(Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()));
+  const plan = () => document.querySelector('input[name="qPlan"]:checked').value;
+  function update() {
+    const q = +people.value, p = plan(), r = rateFor(q);
+    document.getElementById('qPeopleOut').textContent = q.toLocaleString('ko-KR') + '명';
+    document.getElementById('qTotal').textContent = won(costFor(p, q)) + '원';
+    document.getElementById('qMeta').textContent = `인당 ${won(unitFor(p, q))}원 × ${q.toLocaleString('ko-KR')}명${r ? ` · ${Math.round(r * 100)}% 할인` : ''} · VAT 포함 ${won(costFor(p, q) * (1 + CONFIG.vat))}원`;
+    const base = start.value ? new Date(start.value + 'T00:00:00') : today;
+    const list = new Date(base); list.setDate(list.getDate() + CONFIG.listDays);
+    document.getElementById('qListLbl').textContent = CONFIG.plans[p].listLabel;
+    document.getElementById('qList').textContent = fmtDate(list) + '까지';
+    quick.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', +b.dataset.n === q));
+  }
+  cats.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    cat = b.textContent;
+    cats.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  });
+  quick.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    people.value = b.dataset.n; update();
+  });
+  people.addEventListener('input', update); start.addEventListener('input', update);
+  document.querySelectorAll('input[name="qPlan"]').forEach(r => r.addEventListener('change', update));
+  update();
+  document.getElementById('quote').addEventListener('submit', e => {
+    e.preventDefault();
+    document.getElementById('fQty').value = people.value;
+    document.getElementById('fCat').value = cat;
+    document.getElementById(plan() === 'pick' ? 'fPlanPick' : 'fPlanMatch').checked = true;
+    track('QuoteUsed', { plan: plan(), people: +people.value, value: Math.round(costFor(plan(), +people.value)), currency: 'KRW' }, true);
+    document.getElementById('start').scrollIntoView({ behavior: 'smooth' });
+  });
+})();
+
+/* 1명 vs 1만 명: 점 1만 개 */
+(() => {
+  const canvas = document.getElementById('dots');
+  function draw() {
+    const size = canvas.clientWidth; if (!size) return;
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = canvas.height = Math.round(size * dpr);
+    const ctx = canvas.getContext('2d');
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, size, size);
+    const n = 100, cell = size / n, r = Math.max(cell * 0.32, 0.6);
+    const base = css('--dot'), hot = css('--signal');
+    let seed = 7;
+    const rand = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    for (let y = 0; y < n; y++) for (let x = 0; x < n; x++) {
+      const isHot = rand() < 0.03;
+      ctx.fillStyle = isHot ? hot : base;
+      ctx.beginPath();
+      ctx.arc(x * cell + cell / 2, y * cell + cell / 2, isHot ? r * 1.35 : r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+  draw();
+  addEventListener('resize', draw);
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', draw);
+  new MutationObserver(draw).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  if (document.fonts) document.fonts.ready.then(draw);
+})();
+
+/* 소구점별 반응 (예시) */
+(() => {
+  const unit = unitFor('match', 30);
+  const ANGLES = [
+    ['A', '속건조가 사라진다', 12, 16800, 3.4],
+    ['B', '화장이 안 뜬다', 10, 9600, 2.1],
+    ['C', '세라마이드 성분', 8, 5400, 0.9]
+  ];
+  const maxSave = Math.max(...ANGLES.map(a => a[4]));
+  document.getElementById('angleRows').innerHTML = ANGLES.map(([k, name, n, views, save], i) => `
+    <tr class="${i === 0 ? 'win' : ''}"><td><span class="angle-name"><b>${k}</b>${name}</span></td>
+    <td>${n}편</td><td>${views.toLocaleString('ko-KR')}</td>
+    <td>${save.toFixed(1)}%<span class="minibar" aria-hidden="true"><i style="width:${(save / maxSave * 100).toFixed(0)}%"></i></span></td>
+    <td>${(unit / views).toFixed(1)}원</td></tr>`).join('');
+  document.getElementById('angleFoot').innerHTML =
+    `<b>A가 이겼습니다.</b> 같은 비용으로 조회는 C의 ${(ANGLES[0][3] / ANGLES[2][3]).toFixed(1)}배, 저장률은 ${(ANGLES[0][4] / ANGLES[2][4]).toFixed(1)}배. 다음 광고 소재와 상세페이지 첫 줄은 A로 가면 됩니다.`;
+  const totalViews = ANGLES.reduce((s, a) => s + a[2] * a[3], 0);
+  document.getElementById('viewsAll').firstChild.textContent = (totalViews / 10000).toFixed(1);
+  document.getElementById('cpvAll').firstChild.textContent = (costFor('match', 30) / totalViews).toFixed(1);
+})();
+
+/* 필터 퍼널 (예시) */
+(() => {
+  const STEPS = [
+    ['카테고리·타깃이 맞는 계정', '스킨케어, 20~30대 여성 팔로워', 1240],
+    ['광고 계정 제외', '피드가 협찬 글로 채워진 계정', 1010],
+    ['품앗이 계정 제외', '좋아요·댓글을 주고받아 반응을 부풀린 계정', 760],
+    ['가이드를 지켜 온 사람', '이전 캠페인에서 필수 표기·금지 표현을 지킴', 540],
+    ['성의 있게 찍는 사람', '제품이 제대로 보이게, 공들여 촬영', 330],
+    ['제품을 제대로 쓰는 사람', '광고 제품을 실제로 정확히 써서 보여 줌', 210]
+  ];
+  const max = STEPS[0][2];
+  document.getElementById('funnel').innerHTML = STEPS.map(([t, d, n]) => `
+    <li><span class="lab"><b>${t}</b><span>${d}</span></span><span class="track" aria-hidden="true"><i style="width:${(n / max * 100).toFixed(1)}%"></i></span><span class="n">${n.toLocaleString('ko-KR')}</span></li>`).join('')
+    + `<li class="out"><span class="lab"><b>이 중에서 30명 매칭</b><span>직접 선택이면 45명 후보</span></span><span class="track" aria-hidden="true"><i style="width:${(30 / max * 100).toFixed(1)}%"></i></span><span class="n">30</span></li>`;
+})();
+
+/* 진행 방식 탭 (예시 데이터, 가상 계정) */
+(() => {
+  const LIST = [
+    ['@soyo.daily', 3800, 5200, 12, '8/8', '선택'],
+    ['@skin.diary', 2900, 3900, 8, '5/5', '선택'],
+    ['@jiyu.log', 12000, 15800, 18, '11/12', '선택'],
+    ['@routine.maker', 9800, 12400, 15, '6/6', '후보'],
+    ['@haru.dam', 7400, 9100, 10, '9/9', '선택'],
+    ['@yoon.moves', 950, 2300, 5, '3/3', '교체 요청']
+  ];
+  document.getElementById('listRows').innerHTML = LIST.map(([h, f, v, ad, g, st]) => `
+    <tr><td><span class="who"><span class="av" aria-hidden="true">${h[1].toUpperCase()}</span>${h}</span></td>
+    <td>${f.toLocaleString('ko-KR')}</td><td>${v.toLocaleString('ko-KR')}</td><td>${ad}%</td><td>${g}</td>
+    <td class="l"><span class="pill ${st === '선택' ? 'ok' : st === '후보' ? 'mute' : 'sig'}">${st}</span></td></tr>`).join('');
+
+  const STATUS = [
+    ['@soyo.daily', 'A', '원본 수령', 'ok', true, '10.31', 33900],
+    ['@today.table', 'A', '원본 수령', 'ok', true, '10.30', 41200],
+    ['@skin.diary', 'B', '게시 완료', 'sig', true, '11.01', 6100],
+    ['@jiyu.log', 'C', '게시 완료', 'sig', true, '11.02', 18700],
+    ['@haru.dam', 'B', '촬영 중', 'info', false, '-', null],
+    ['@snack.hunt', 'A', '가이드 확인', 'mute', false, '-', null]
+  ];
+  document.getElementById('statusRows').innerHTML = STATUS.map(([h, a, st, cls, posted, d, v]) => `
+    <tr><td><span class="who"><span class="av" aria-hidden="true">${h[1].toUpperCase()}</span>${h}</span></td>
+    <td class="l"><span class="pill mute">${a}</span></td>
+    <td class="l"><span class="pill ${cls}">${st}</span></td>
+    <td class="l">${posted ? '<span style="text-decoration:underline;text-underline-offset:3px">릴스 보기</span>' : '<span style="color:var(--faint)">게시 전</span>'}</td>
+    <td>${d}</td><td>${v ? v.toLocaleString('ko-KR') : '-'}</td></tr>`).join('');
+
+  const TOP = [['@today.table · A', 41200], ['@soyo.daily · A', 33900], ['@snack.hunt · A', 27500], ['@jiyu.log · C', 18700]];
+  document.getElementById('topBars').innerHTML = TOP.map(([h, v]) => `
+    <li><span>${h}</span><span class="track" aria-hidden="true"><i style="width:${(v / TOP[0][1] * 100).toFixed(1)}%"></i></span><span class="v">${v.toLocaleString('ko-KR')}회</span></li>`).join('');
+
+  const tabs = [...document.querySelectorAll('.tab')];
+  const stage = document.getElementById('appStage');
+  const STAGES = ['필터 통과 210명 중 30명', '소구점 3개 · 30명 전달 완료', '게시 18 / 30 · 원본 11', '결과 리포트 · 게시 7일 차'];
+  function select(i, focus) {
+    tabs.forEach((t, k) => {
+      const on = k === i;
+      t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    stage.textContent = STAGES[i];
+    if (focus) tabs[i].focus();
+  }
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(i));
+    t.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        select((i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length, true);
+      }
+    });
+  });
+  select(0);
+})();
+
+/* 예산 비교 */
+(() => {
+  const amt = document.getElementById('bAmt'), quick = document.getElementById('bQuick');
+  const PRESETS = [3000000, 10000000, 30000000, 100000000];
+  quick.innerHTML = PRESETS.map(v => `<button type="button" data-v="${v}" aria-pressed="false">${krw(v)}</button>`).join('');
+  function peopleFor(plan, budget) {
+    let q = Math.floor(budget / CONFIG.plans[plan].price);
+    for (let i = 0; i < 4; i++) q = Math.floor(budget / unitFor(plan, q));
+    return q;
+  }
+  function update() {
+    const b = +amt.value;
+    const m = peopleFor('match', b), p = peopleFor('pick', b), ag = Math.floor(b / CONFIG.agencyRef);
+    document.getElementById('bAmtOut').textContent = krw(b);
+    document.getElementById('bMatch').firstChild.textContent = m.toLocaleString('ko-KR');
+    document.getElementById('bPick').firstChild.textContent = p.toLocaleString('ko-KR');
+    document.getElementById('bAg').firstChild.textContent = ag.toLocaleString('ko-KR');
+    document.getElementById('bMatchUnit').textContent = `인당 ${won(unitFor('match', m))}원`;
+    document.getElementById('bPickUnit').textContent = `인당 ${won(unitFor('pick', p))}원`;
+    document.getElementById('bMatchBar').style.width = '100%';
+    document.getElementById('bPickBar').style.width = (p / m * 100).toFixed(1) + '%';
+    document.getElementById('bAgBar').style.width = (ag / m * 100).toFixed(1) + '%';
+    document.getElementById('bSum').innerHTML = `${krw(b)}이면 제작형 대행으로는 영상 ${ag.toLocaleString('ko-KR')}편, 패스트 매칭으로는 <b>${m.toLocaleString('ko-KR')}편</b>. 시험해 볼 수 있는 경우의 수가 <b>${(m / Math.max(ag, 1)).toFixed(1)}배</b>입니다.`;
+    quick.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', +x.dataset.v === b));
+  }
+  quick.addEventListener('click', e => { const x = e.target.closest('button'); if (!x) return; amt.value = x.dataset.v; update(); });
+  amt.addEventListener('input', update);
+  update();
+})();
+
+/* 자주 묻는 질문 */
+(() => {
+  const M = won(CONFIG.plans.match.price), P = won(CONFIG.plans.pick.price);
+  const FAQ = [
+    ['가격', `${M}원이랑 ${P}원, 뭐가 달라요?`, `${M}원은 필터를 통과한 사람 중에서 저희가 골라 확정합니다. ${P}원은 같은 리스트를 받아서 직접 고르시는 거고요. 진행과 리포트는 똑같습니다.`],
+    ['가격', '가격에 뭐가 들어가요?', '인플루언서 원고료, 소싱, 가이드, 영상 수합, 리포트까지 다 들어 있어요. 인플루언서에게는 브랜드 제품이 함께 가고요. VAT, 제품 원가, 배송비만 따로입니다.'],
+    ['가격', '팔로워 많은 사람도 같은 가격이에요?', '500명에서 3만 명 사이면 똑같습니다. 그 위로는 안 합니다. 저희가 잘하는 건 작게 많이 뿌리는 쪽이라서요.'],
+    ['가격', '할인은요?', `${CONFIG.discounts.map(d => `${d.min.toLocaleString('ko-KR')}명부터 ${Math.round(d.rate * 100)}%`).join(', ')} 빠집니다. 최소 ${CONFIG.minPeople}명부터 진행해요.`],
+    ['진행', '그 가격에 품질은 괜찮아요?', '광고 계정, 품앗이 계정은 알고리즘으로 먼저 지웁니다. 남은 사람 중에서도 이전 캠페인에서 가이드를 지켰는지, 영상을 성의 있게 찍는지, 제품을 제대로 쓰는지 보고 보냅니다.'],
+    ['진행', '소구점은 어떻게 나눠요?', '가이드에 시험해 볼 소구점을 두세 개 적어 주시면 인원을 나눠 배정합니다. 리포트에서 소구점별 조회, 저장률, CPV를 나란히 비교해 드려요.'],
+    ['진행', '요청하면 어떻게 연락이 와요?', '문자로 먼저 접수 확인을 드리고, 편한 시간에 전화로 제품과 인원, 시험할 소구점을 여쭤봅니다. 리스트가 나오면 화상 미팅에서 같이 보고 확정해요.'],
+    ['진행', '리스트는 정말 3일이에요?', '요청일 기준 3일 안에 드립니다. 패스트 매칭은 확정 명단, 직접 선택은 필요 인원의 1.5배 후보예요.'],
+    ['진행', '기획안이나 대본 컨펌은요?', '없습니다. 가이드 한 장으로 갑니다. 필수 표기, 금지 표현, 제품 노출처럼 가이드에 적힌 걸 안 지킨 영상만 한 번 수정 요청해요. 톤이나 취향 차이는 수정 대상이 아닙니다.'],
+    ['진행', '안 올리면요?', '제품 받은 날부터 7일이 기한이고, 3일 더 기다립니다. 그래도 안 올리면 같은 조건의 다른 사람으로 채우고, 못 채우면 그 인원 비용을 돌려드려요. 제품 원가와 배송비는 빼고요.'],
+    ['진행', '제품 발송은 누가 해요?', '확정되면 배송지 시트를 드립니다. 발송은 브랜드에서 하시면 되고, 배송 정보는 캠페인이 끝나면 파기해요.'],
+    ['콘텐츠', '리포트는 언제 받아요?', '게시 5일 차에 1차, 30일 차에 최종 리포트를 드립니다. 영상별 조회, 좋아요, 저장, 공유, CPV에 소구점별 비교와 광고로 돌릴 만한 영상 표시까지 들어가요.'],
+    ['콘텐츠', '영상 광고에 써도 돼요?', `PA 코드(파트너십 광고)는 기본 포함이에요. 원본 파일은 리포트를 보고 이긴 영상만 골라서 편당 ${won(CONFIG.adRights)}원에 6개월 동안 온라인 광고와 상세페이지에 쓰시면 됩니다.`],
+    ['콘텐츠', '게시물은 얼마나 유지돼요?', `${CONFIG.keepMonths}개월입니다. 그 전에 지우면 다시 올리게 하거나 다른 사람으로 채워요.`],
+    ['정산', '결제는요?', '첫 캠페인은 명단 확정 때 선입금입니다. 두 번째부터는 월말 정산도 돼요. 리스트만 받아 보고 안 하셔도 비용은 없습니다.'],
+    ['정산', '확정하고 나서 취소하면요?', '제품 발송 전이면 인당 비용의 절반을 돌려드리고, 발송한 뒤에는 취소가 안 됩니다. 인플루언서 일정이 이미 잡혀 있어서요.']
+  ];
+  const groups = ['전체', '가격', '진행', '콘텐츠', '정산'];
+  const catsEl = document.getElementById('faqCats'), list = document.getElementById('faqList');
+  catsEl.innerHTML = groups.map((g, i) => `<button type="button" aria-pressed="${i === 0}">${g}</button>`).join('');
+  function render(g) {
+    list.replaceChildren();
+    FAQ.filter(f => g === '전체' || f[0] === g).forEach(([, q, a], i) => {
+      const d = document.createElement('details'); if (i === 0) d.open = true;
+      const s = document.createElement('summary'); s.textContent = q;
+      const p = document.createElement('p'); p.textContent = a;
+      d.append(s, p); list.append(d);
+    });
+  }
+  catsEl.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    catsEl.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    render(b.textContent);
+  });
+  render('전체');
+})();
+
+/* 캠페인 시작 폼: formEndpoint(구글 Apps Script 웹 앱)가 있으면 시트로 보내고, 없으면 화면만 넘어갑니다 */
+(() => {
+  const sel = document.getElementById('fCat');
+  CATS.concat('기타').forEach(c => { const o = document.createElement('option'); o.value = o.textContent = c; sel.append(o); });
+  const form = document.getElementById('form'), done = document.getElementById('done');
+  const rules = {
+    fBrand: v => v.trim() !== '',
+    fName: v => v.trim() !== '',
+    fPhone: v => /^[0-9+\-\s]{9,}$/.test(v.trim()),
+    fMail: v => !v.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+    fCat: v => v !== ''
+  };
+  Object.keys(rules).forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener(el.tagName === 'SELECT' ? 'change' : 'input', () => el.closest('.f').classList.remove('bad'));
+  });
+  const submitBtn = document.getElementById('fSubmit'), errEl = document.getElementById('formErr');
+  const send = payload => fetch(RUNTIME.formEndpoint, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(payload) });
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    errEl.hidden = true;
+    let first = null;
+    for (const [id, ok] of Object.entries(rules)) {
+      const el = document.getElementById(id), bad = !ok(el.value);
+      el.closest('.f').classList.toggle('bad', bad);
+      if (bad && !first) first = el;
+    }
+    const agree = document.getElementById('fAgree');
+    document.getElementById('agreeRow').classList.toggle('bad', !agree.checked);
+    if (!agree.checked && !first) first = agree;
+    if (first) { first.focus(); return; }
+
+    const plan = document.querySelector('input[name="fPlan"]:checked').value;
+    const q = Math.max(CONFIG.minPeople, Math.round(+document.getElementById('fQty').value || CONFIG.minPeople));
+    const total = Math.round(costFor(plan, q));
+    const list = new Date(); list.setDate(list.getDate() + CONFIG.listDays);
+    const val = id => document.getElementById(id).value.trim();
+
+    if (RUNTIME.formEndpoint && !val('fWebsite')) {
+      const payload = Object.assign({
+        plan: `${CONFIG.plans[plan].name} (인당 ${won(unitFor(plan, q))}원)`,
+        brand: val('fBrand'), name: val('fName'), phone: val('fPhone'), callTime: val('fTime'),
+        email: val('fMail'), category: sel.value, people: q, estimate: total, memo: val('fMemo'),
+        referrer: document.referrer.slice(0, 300), page: location.href.split('#')[0].slice(0, 300)
+      }, ATTR);
+      submitBtn.disabled = true; submitBtn.textContent = '보내는 중…';
+      try {
+        await send(payload);
+      } catch (err) {
+        submitBtn.disabled = false; submitBtn.textContent = '리스트 요청하기';
+        errEl.textContent = '전송이 안 됐어요. 잠시 후 다시 눌러 주세요.' + (RUNTIME.operator && RUNTIME.operator.phone ? ` 급하시면 문자 주세요: ${RUNTIME.operator.phone}` : '');
+        errEl.hidden = false;
+        return;
+      }
+      submitBtn.disabled = false; submitBtn.textContent = '리스트 요청하기';
+      track('Lead', { value: total, currency: 'KRW', content_name: CONFIG.plans[plan].name, num_items: q });
+    }
+    const rows = [
+      ['진행 방식', `${CONFIG.plans[plan].name} (인당 ${won(unitFor(plan, q))}원)`],
+      ['브랜드', document.getElementById('fBrand').value],
+      ['담당자', document.getElementById('fName').value],
+      ['카테고리', sel.value],
+      ['통화 편한 시간', document.getElementById('fTime').value],
+      ['인플루언서 수', `${q.toLocaleString('ko-KR')}명`],
+      ['예상 금액', `${won(total)}원 (VAT 별도)`],
+      ['리스트 도착', `${fmtDate(list)}까지`]
+    ];
+    document.getElementById('doneMsg').textContent = `곧 문자로 먼저 연락드릴게요. 통화로 조건을 확인하고, 3일 안에 ${CONFIG.plans[plan].listNote} 보내드립니다. 화상 미팅에서 같이 보고 확정해요.`;
+    const dl = document.getElementById('doneDl');
+    dl.replaceChildren();
+    rows.forEach(([k, v]) => { const dt = document.createElement('dt'), dd = document.createElement('dd'); dt.textContent = k; dd.textContent = v; dl.append(dt, dd); });
+    form.hidden = true; done.hidden = false;
+  });
+  document.getElementById('again').addEventListener('click', () => { form.reset(); form.hidden = false; done.hidden = true; });
+})();
+</script>
+</body>
+</html>
